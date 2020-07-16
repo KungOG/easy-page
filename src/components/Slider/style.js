@@ -19,7 +19,7 @@ StyledSlider.Bullets = styled.div`
   display: flex;
   justify-content: center;
   position: absolute;
-  top: -25px;
+  top: -${spacers.medium};
   left: 0;
   right: 0;
   list-style: none;
@@ -29,7 +29,7 @@ StyledSlider.Bullet = styled.button`
   transition: background-color 0.3s;
   width: 13px;
   height: 13px;
-  border: 2px solid ${colors.white};
+  border: ${spacers.xxxSmall} solid ${colors.white};
   background: none;
   border-radius: 100%;
   outline: none;

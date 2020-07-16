@@ -62,7 +62,7 @@ StyledProjectCard.Gradient = styled.div`
   height: 100%;
   bottom: 0;
   pointer-events: none;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: ${colors.white};
   background: linear-gradient(
     to top,
     white 0%,

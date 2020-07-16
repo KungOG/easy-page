@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import { colors } from "../../styles/utilites/variables";
+import { colors, spacers } from "../../styles/utilites/variables";
 
 const StyledProjects = styled.div`
   background: ${colors.white};
   display: flex;
   flex-direction: column;
-  padding: 5px 5px 0 5px;
-  border-radius: 5px 5px 0 0;
+  padding: ${spacers.small_border} ${spacers.small_border} 0
+    ${spacers.small_border};
+  border-radius: ${spacers.small_border} ${spacers.small_border} 0 0;
   position: absolute;
   top: 0;
   left: 0;

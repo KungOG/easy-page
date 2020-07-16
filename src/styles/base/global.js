@@ -26,7 +26,7 @@ body {
   font-family: "Font Awesome 5 Pro";
   font-weight: 400;
   display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
+  font: normal normal normal ${typography.size.xSmall}/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;

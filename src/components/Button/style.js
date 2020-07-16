@@ -1,5 +1,9 @@
 import styled, { css, keyframes } from "styled-components";
-import { colors, animations } from "../../styles/utilites/variables";
+import {
+  colors,
+  animations,
+  typography,
+} from "../../styles/utilites/variables";
 
 const opacity = keyframes`
   from { opacity: 0; }
@@ -23,7 +27,7 @@ const StyledButton = styled.button`
     color: ${colors.red};
     line-height: 23px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: ${typography.letter_spacing};
     text-align: center;
   }
 
@@ -75,54 +79,7 @@ const StyledButton = styled.button`
     }
   }
 
-  ${(props) =>
-    props.active &&
-    css`
-      & span {
-        opacity: 1;
-        position: relative;
-        display: inline-block;
-        text-transform: uppercase;
-
-        &:hover {
-          &:after {
-            opacity: 1;
-            transform: translateY(0) rotateX(0);
-          }
-
-          &:before {
-            //opacity: 0;
-            transform: translateY(50%) rotateX(90deg);
-          }
-        }
-
-        &::after,
-        &::before {
-          top: 0;
-          left: 0;
-          display: block;
-          line-height: 23px;
-          transition: $speed;
-        }
-
-        &::after {
-          //opacity: 0;
-          width: 100%;
-          color: #323237;
-          position: absolute;
-          content: attr(data-back);
-          transform: translateY(-50%) rotateX(90deg);
-        }
-
-        &::before {
-          opacity: 1;
-          color: #adadaf;
-          position: relative;
-          content: attr(data-front);
-          transform: translateY(0) rotateX(0);
-        }
-      }
-    `}
+  ${(props) => props.active && css``}
 `;
 
 export default StyledButton;

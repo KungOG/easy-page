@@ -1,12 +1,18 @@
 import styled from "styled-components";
-import { spacers, colors, typography } from "../../styles/utilites/variables";
+import {
+  spacers,
+  colors,
+  typography,
+  displayCenter,
+} from "../../styles/utilites/variables";
 
 const StyledProfile = styled.div`
   background: ${colors.white};
   display: flex;
   flex-direction: column;
-  padding: 5px 5px 0 5px;
-  border-radius: 5px 5px 0 0;
+  padding: ${spacers.small_border} ${spacers.small_border} 0
+    ${spacers.small_border};
+  border-radius: ${spacers.small_border} ${spacers.small_border} 0 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -19,9 +25,7 @@ const StyledProfile = styled.div`
 `;
 
 StyledProfile.Picture = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${displayCenter.allCenter}
   height: calc(100% - 80px);
   width: 100%;
 `;
@@ -35,10 +39,8 @@ StyledProfile.Image = styled.div`
 `;
 
 StyledProfile.Text = styled.div`
-  display: flex;
+  ${displayCenter.allCenter}
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 200px;
   width: 100%;
 `;
@@ -72,14 +74,12 @@ StyledProfile.Links = styled.div`
 `;
 
 StyledProfile.Link = styled.a`
+  ${displayCenter.allCenter}
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
   width: 26px;
   height: 26px;
-  padding: 1px 4px;
+  padding: 1px ${spacers.xxSmall};
 
   &::before,
   &::after {
@@ -99,7 +99,7 @@ StyledProfile.Link = styled.a`
   }
 
   &:hover::before {
-    box-shadow: inset 0 0 0 20px ${colors.red};
+    box-shadow: inset 0 0 0 ${spacers.base} ${colors.red};
   }
 
   &:hover > i {
