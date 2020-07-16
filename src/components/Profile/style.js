@@ -71,7 +71,7 @@ StyledProfile.Links = styled.div`
   width: 100%;
 `;
 
-StyledProfile.Link = styled.div`
+StyledProfile.Link = styled.a`
   position: relative;
   display: flex;
   justify-content: center;

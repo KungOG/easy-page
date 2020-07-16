@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import StyledProjectCard from "./style";
 //import Image from "../../assets/images/image.jpg";
 import LogoType from "../../assets/images/logotype.jpg";
 
@@ -16,24 +17,23 @@ const ProjectCard = (props) => {
     { Image } === true ? `url('${Image}')` : `url('${LogoType}')`;
 
   return (
-    <div
-      className={[`projectCard ${active ? "-visibleProject" : ""}`]}
+    <StyledProjectCard
+      show={active}
       style={{ backgroundImage: `${backgroundImage}` }}
     >
-      <div className="projectCard__wrapper">
-        <h1 className="projectCard__name">{projectName}</h1>
-        <p className="projectCard__content">{projectContent}</p>
-        <a
-          className="projectCard__link"
+      <StyledProjectCard.Wrapper>
+        <StyledProjectCard.Name>{projectName}</StyledProjectCard.Name>
+        <StyledProjectCard.Content>{projectContent}</StyledProjectCard.Content>
+        <StyledProjectCard.Link
           href={projectLink}
           rel="noopener noreferrer external"
           target="_blank"
         >
           {projectTag}
-        </a>
-      </div>
-      <div className="projectCard__gradient" />
-    </div>
+        </StyledProjectCard.Link>
+      </StyledProjectCard.Wrapper>
+      <StyledProjectCard.Gradient />
+    </StyledProjectCard>
   );
 };
 
