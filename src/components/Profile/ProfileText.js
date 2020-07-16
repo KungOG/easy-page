@@ -4,18 +4,12 @@ import StyledProfile from "./style";
 
 const ProfileText = (props) => {
   const { name, work, text } = props;
+  console.log(name, work, text);
   return (
-    <StyledProfile.Text className="profile__text">
-      <StyledProfile.Name className="profile__name">
-        Oscar Gustafsson
-      </StyledProfile.Name>
-      <StyledProfile.Work className="profile__work">
-        Frontend developer
-      </StyledProfile.Work>
-      <StyledProfile.Paragraph className="profile__paragraph">
-        “If you want to take the island you need to burn the boats.” <br />
-        Hernán Cortés
-      </StyledProfile.Paragraph>
+    <StyledProfile.Text>
+      <StyledProfile.Name>{name}</StyledProfile.Name>
+      <StyledProfile.Work>{work}</StyledProfile.Work>
+      <StyledProfile.Paragraph dangerouslySetInnerHTML={{ __html: text }} />
     </StyledProfile.Text>
   );
 };
