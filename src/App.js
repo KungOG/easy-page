@@ -1,15 +1,10 @@
 import React from "react";
+import { Modal } from "./components/Modal";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <Modal />
+  </div>
+);
 
 export default App;
