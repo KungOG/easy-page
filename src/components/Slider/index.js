@@ -12,6 +12,7 @@ const Slider = ({ children, bullets }) => {
           return (
             <ProjectCard
               key={item.id}
+              projectImage={item.projectImage}
               projectName={item.projectName}
               projectContent={item.projectContent}
               projectLink={item.projectLink}

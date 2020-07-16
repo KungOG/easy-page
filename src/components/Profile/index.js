@@ -7,11 +7,11 @@ import { ProfileYou } from "../../assets/data/ProfileSocials";
 import LogoType from "../../assets/images/logotype.jpg";
 
 const Profile = ({ hide }) => {
-  const backgroundImage = ProfileYou.image ? ProfileYou.image : LogoType;
+  const profilePicture = ProfileYou.image ? ProfileYou.image : LogoType;
 
   return (
     <StyledProfile hide={hide}>
-      <ProfilePicture profilePicture={backgroundImage} />
+      <ProfilePicture profilePicture={profilePicture} />
       <ProfileText
         name={ProfileYou.name}
         work={ProfileYou.work}

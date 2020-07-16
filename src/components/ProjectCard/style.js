@@ -10,8 +10,9 @@ const StyledProjectCard = styled.div`
   transition: cubic-bezier(1, 0, 0, 1) 0.5s;
   border-radius: 5px;
   position: relative;
-  background-size: contain;
-  background-position: center;
+  background: no-repeat center center;
+  background-image: url(${(props) => props.image});
+  background-size: cover;
   ${(props) =>
     props.show &&
     css`
@@ -45,6 +46,7 @@ StyledProjectCard.Content = styled.p`
   color: ${colors.black};
   margin-top: ${spacers.large};
   font-weight: 600;
+  max-width: 90%;
 `;
 
 StyledProjectCard.Link = styled.a`

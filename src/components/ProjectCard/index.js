@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import StyledProjectCard from "./style";
-//import Image from "../../assets/images/image.jpg";
 import LogoType from "../../assets/images/logotype.jpg";
 
 const ProjectCard = (props) => {
   const {
+    projectImage,
     projectName,
     projectContent,
     projectLink,
@@ -13,17 +13,15 @@ const ProjectCard = (props) => {
     active,
   } = props;
 
-  const backgroundImage =
-    { Image } === true ? `url('${Image}')` : `url('${LogoType}')`;
+  const Image = projectImage ? projectImage : LogoType;
 
   return (
-    <StyledProjectCard
-      show={active}
-      style={{ backgroundImage: `${backgroundImage}` }}
-    >
+    <StyledProjectCard show={active} image={Image}>
       <StyledProjectCard.Wrapper>
         <StyledProjectCard.Name>{projectName}</StyledProjectCard.Name>
-        <StyledProjectCard.Content>{projectContent}</StyledProjectCard.Content>
+        <StyledProjectCard.Content
+          dangerouslySetInnerHTML={{ __html: projectContent }}
+        />
         <StyledProjectCard.Link
           href={projectLink}
           rel="noopener noreferrer external"
