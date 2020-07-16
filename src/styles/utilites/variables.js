@@ -49,14 +49,9 @@ export const typography = {
 /*
  * * Animations * *
  */
+
 export const animations = {
   speed: "0.3s",
-  opacity: `
-    @keyframes activeOpacityButton {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  `,
 };
 
 /*

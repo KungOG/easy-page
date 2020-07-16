@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../styles/utilites/variables";
 
 const StyledModal = styled.div`
   display: flex;
@@ -19,7 +20,7 @@ StyledModal.Top = styled.div`
 StyledModal.Bottom = styled.div`
   padding: 0 5px 5px 5px;
   border-radius: 0 0 5px 5px;
-  background: $color_white;
+  background: ${colors.white};
   position: relative;
 `;
 

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import StyledSlider from "./style";
 import { ProjectCard } from "../ProjectCard";
 
 const Slider = ({ children, bullets }) => {
   const [activeSlide, setActiveSlide] = useState(1);
   return (
     <>
-      <div className={[`slider ${activeSlide ? `slide-${activeSlide}` : ""}`]}>
+      <StyledSlider currentSlide={activeSlide - 1}>
         {children.map((item, key) => {
           return (
             <ProjectCard
@@ -19,21 +20,19 @@ const Slider = ({ children, bullets }) => {
             />
           );
         })}
-      </div>
+      </StyledSlider>
       {bullets && (
-        <div className="slider__bullets">
+        <StyledSlider.Bullets>
           {children.map((child, key) => {
             return (
-              <button
+              <StyledSlider.Bullet
                 key={key}
-                className={[
-                  `slider__bullet${activeSlide - 1 === key ? " active" : ""}`,
-                ]}
+                currentSlide={activeSlide - 1 === key}
                 onClick={() => setActiveSlide(key + 1)}
               />
             );
           })}
-        </div>
+        </StyledSlider.Bullets>
       )}
     </>
   );

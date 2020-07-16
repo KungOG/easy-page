@@ -1,10 +1,12 @@
 import React from "react";
+import StyledButton from "./style";
 
 const Button = ({ handleClick, isActive }) => {
   return (
     <>
-      <button
-        className={[`modal__button ${isActive ? "-active" : "-inactive"}`]}
+      <StyledButton
+        active={isActive}
+        className={`${isActive ? "-active" : "-inactive"}`}
         onClick={handleClick}
       >
         {!isActive ? (
@@ -12,7 +14,7 @@ const Button = ({ handleClick, isActive }) => {
         ) : (
           <span>Hide Projects</span>
         )}
-      </button>
+      </StyledButton>
     </>
   );
 };

@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+import StyledProjects from "./style";
 import { Slider } from "../Slider";
 
 const example = [
@@ -54,10 +56,14 @@ const example = [
 
 const Projects = ({ isActive }) => {
   return (
-    <div className={[`projects${isActive ? " -show" : ""}`]}>
+    <StyledProjects hide={isActive}>
       <Slider bullets children={example} />
-    </div>
+    </StyledProjects>
   );
+};
+
+Projects.propTypes = {
+  hide: PropTypes.bool,
 };
 
 export { Projects };
