@@ -4,7 +4,6 @@ import StyledProfile from "./style";
 
 const ProfileText = (props) => {
   const { name, work, text } = props;
-  console.log(name, work, text);
   return (
     <StyledProfile.Text>
       <StyledProfile.Name>{name}</StyledProfile.Name>
