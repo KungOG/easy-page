@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
+import StyledModal from "./style";
 import { Projects } from "../Projects";
-import { ProfilePicture } from "../Profile/ProfilePicture";
-import { ProfileText } from "../Profile/ProfileText";
 import { ProfileSocials } from "../Profile/ProfileSocials";
 import { Button } from "../Button";
-import Image from "../../img/image.jpg";
-import LogoType from "../../img/logotype.jpg";
+import { Profile } from "../Profile";
 
 const Modal = () => {
   const [active, setActive] = useState(false);
@@ -23,23 +21,17 @@ const Modal = () => {
     return () => clearTimeout(timer);
   }, [flipCard]);
 
-  const backgroundImage =
-    Image === true ? `url('${Image}')` : `url('${LogoType}')`;
-
   return (
-    <div className="modal">
-      <div className={[`modal__top${flipCard ? " undock" : ""}`]}>
-        <div className={[`profile${active ? " -hide" : ""}`]}>
-          <ProfilePicture profilePicture={backgroundImage} />
-          <ProfileText />
-        </div>
+    <StyledModal>
+      <StyledModal.Top flip={flipCard}>
+        <Profile hide={active} />
         <Projects isActive={active} />
-      </div>
-      <div className="modal__bottom">
+      </StyledModal.Top>
+      <StyledModal.Bottom>
         <ProfileSocials />
         <Button handleClick={showProjects} isActive={active} />
-      </div>
-    </div>
+      </StyledModal.Bottom>
+    </StyledModal>
   );
 };
 

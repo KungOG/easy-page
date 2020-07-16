@@ -1,45 +1,50 @@
 import React from "react";
-//import PropTypes from "prop-types";
+import PropTypes from "prop-types";
+import StyledProfile from "./style";
+import { Button } from "../Button";
 
-const ProfileSocials = () => {
+const ProfileSocials = ({ href, icon }) => {
   return (
-    <div className="profile__links">
-      <a
+    <StyledProfile.Links className="profile__links">
+      <StyledProfile.Link
         className="profile__links--type"
         href="https://www.facebook.com/KungOG"
         rel="noopener noreferrer external"
         target="_blank"
       >
         <i className="fa fa-facebook"></i>
-      </a>
-      <a
+      </StyledProfile.Link>
+      <StyledProfile.Link
         className="profile__links--type"
         href="https://twitter.com/OG91an"
         rel="noopener noreferrer external"
         target="_blank"
       >
         <i className="fa fa-twitter"></i>
-      </a>
-      <a
+      </StyledProfile.Link>
+      <StyledProfile.Link
         className="profile__links--type"
         href="https://github.com/KungOG"
         rel="noopener noreferrer external"
         target="_blank"
       >
         <i className="fa fa-github"></i>
-      </a>
-      <a
+      </StyledProfile.Link>
+      <StyledProfile.Link
         className="profile__links--type"
         href="https://www.linkedin.com/in/kungog"
         rel="noopener noreferrer external"
         target="_blank"
       >
         <i className="fa fa-linkedin"></i>
-      </a>
-    </div>
+      </StyledProfile.Link>
+    </StyledProfile.Links>
   );
 };
 
-//ProfileSocials.propTypes = {};
+ProfileSocials.propTypes = {
+  href: PropTypes.string,
+  icon: PropTypes.string,
+};
 
 export { ProfileSocials };

@@ -1,16 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
+import StyledProfile from "./style";
 
-const ProfilePicture = (props) => {
-  const { profilePicture } = props;
-
+const ProfilePicture = ({ profilePicture }) => {
   return (
-    <div className="profile__picture">
-      <div
+    <StyledProfile.Picture className="profile__picture">
+      <StyledProfile.Image
         className="profile__image"
         style={{ backgroundImage: `${profilePicture}` }}
       />
-    </div>
+    </StyledProfile.Picture>
   );
 };
 

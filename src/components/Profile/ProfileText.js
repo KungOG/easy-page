@@ -1,19 +1,29 @@
 import React from "react";
-//mport PropTypes from "prop-types";
+import PropTypes from "prop-types";
+import StyledProfile from "./style";
 
-const ProfileText = () => {
+const ProfileText = (props) => {
+  const { name, work, text } = props;
   return (
-    <div className="profile__text">
-      <h1 className="profile__name">Oscar Gustafsson</h1>
-      <h2 className="profile__work">Frontend developer</h2>
-      <div className="profile__paragraph">
+    <StyledProfile.Text className="profile__text">
+      <StyledProfile.Name className="profile__name">
+        Oscar Gustafsson
+      </StyledProfile.Name>
+      <StyledProfile.Work className="profile__work">
+        Frontend developer
+      </StyledProfile.Work>
+      <StyledProfile.Paragraph className="profile__paragraph">
         “If you want to take the island you need to burn the boats.” <br />
         Hernán Cortés
-      </div>
-    </div>
+      </StyledProfile.Paragraph>
+    </StyledProfile.Text>
   );
 };
 
-//ProfileText.propTypes = {};
+ProfileText.propTypes = {
+  name: PropTypes.string,
+  work: PropTypes.string,
+  text: PropTypes.string,
+};
 
 export { ProfileText };

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-//import Image from "../../img/image.jpg";
-import LogoType from "../../img/logotype.jpg";
+//import Image from "../../assets/images/image.jpg";
+import LogoType from "../../assets/images/logotype.jpg";
 
 const ProjectCard = (props) => {
   const {
