@@ -8,10 +8,8 @@ const StyledSlider = styled.div`
   display: flex;
   transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
   transform: translateX(
-    calc(
-      ${(props) =>
-        props.currentSlide === 0 ? "0px" : `-300px * ${props.currentSlide}`}
-    )
+    ${(props) =>
+      props.currentSlide > 0 ? `calc(-300px * ${props.currentSlide})` : ""}
   );
 `;
 

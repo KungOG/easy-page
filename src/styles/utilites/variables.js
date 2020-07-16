@@ -1,3 +1,10 @@
+export const BASE_UNIT = "rem";
+export const BASE_VALUE = BASE_UNIT === "px" ? 10 : 1;
+
+const calcValue = (value) => {
+  return BASE_VALUE * value;
+};
+
 /*
  * * Colors * *
  */
@@ -12,18 +19,18 @@ export const colors = {
  * * Spacers * *
  */
 export const spacers = {
-  xxLarge: "64px",
-  xLarge: "48px",
-  large: "36px",
-  medium: "24px",
-  base: "20px",
-  small: "16px",
-  xSmall: "8px",
-  xxSmall: "4px",
-  xxxSmall: "2px",
+  xxLarge: `${calcValue(6.4)}${BASE_UNIT}`,
+  xLarge: `${calcValue(4.8)}${BASE_UNIT}`,
+  large: `${calcValue(3.6)}${BASE_UNIT}`,
+  medium: `${calcValue(2.4)}${BASE_UNIT}`,
+  base: `${calcValue(2)}${BASE_UNIT}`,
+  small: `${calcValue(1.6)}${BASE_UNIT}`,
+  xSmall: `${calcValue(0.8)}${BASE_UNIT}`,
+  xxSmall: `${calcValue(0.4)}${BASE_UNIT}`,
+  xxxSmall: `${calcValue(0.2)}${BASE_UNIT}`,
 
-  circle: "999px",
-  small_border: "5px",
+  circle: `${calcValue(99)}${BASE_UNIT}`,
+  small_border: `${calcValue(0.5)}${BASE_UNIT}`,
 };
 
 /*
@@ -35,14 +42,14 @@ export const typography = {
   lineHeight: "1.5",
   letter_spacing: "1.5px",
   size: {
-    xxLarge: "70px",
-    xLarge: "48px",
-    large: "32px",
-    medium: "24px",
-    base: "20px",
-    small: "16px",
-    xSmall: "14px",
-    xxSmall: "10px",
+    xxLarge: `${calcValue(7)}${BASE_UNIT}`,
+    xLarge: `${calcValue(4.8)}${BASE_UNIT}`,
+    large: `${calcValue(3.2)}${BASE_UNIT}`,
+    medium: `${calcValue(2.4)}${BASE_UNIT}`,
+    base: `${calcValue(2)}${BASE_UNIT}`,
+    small: `${calcValue(1.6)}${BASE_UNIT}`,
+    xSmall: `${calcValue(1.4)}${BASE_UNIT}`,
+    xxSmall: `${calcValue(1)}${BASE_UNIT}`,
   },
 };
 

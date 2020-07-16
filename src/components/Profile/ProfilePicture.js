@@ -4,11 +4,8 @@ import StyledProfile from "./style";
 
 const ProfilePicture = ({ profilePicture }) => {
   return (
-    <StyledProfile.Picture className="profile__picture">
-      <StyledProfile.Image
-        className="profile__image"
-        style={{ backgroundImage: `${profilePicture}` }}
-      />
+    <StyledProfile.Picture>
+      <StyledProfile.Image image={profilePicture} />
     </StyledProfile.Picture>
   );
 };

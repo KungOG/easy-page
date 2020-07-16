@@ -49,6 +49,7 @@ StyledProjectCard.Content = styled.p`
 
 StyledProjectCard.Link = styled.a`
   color: ${colors.black};
+  font-size: ${typography.size.small};
   margin-top: auto;
   margin-bottom: ${spacers.xLarge};
   text-decoration: none;

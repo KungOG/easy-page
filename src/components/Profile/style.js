@@ -8,7 +8,7 @@ import {
 
 const StyledProfile = styled.div`
   background: ${colors.white};
-  display: flex;
+  ${displayCenter.allCenter};
   flex-direction: column;
   padding: ${spacers.small_border} ${spacers.small_border} 0
     ${spacers.small_border};
@@ -20,13 +20,12 @@ const StyledProfile = styled.div`
   bottom: 0;
   backface-visibility: hidden;
   transition: transform 0.7s 0.25s;
-  z-index: 2;
   transform: ${(props) => (props.hide ? "rotateY(180deg)" : "0")};
 `;
 
 StyledProfile.Picture = styled.div`
   ${displayCenter.allCenter}
-  height: calc(100% - 80px);
+  height: calc(100% - 100px);
   width: 100%;
 `;
 
@@ -35,6 +34,7 @@ StyledProfile.Image = styled.div`
   width: 120px;
   border-radius: ${spacers.circle};
   background: no-repeat center center;
+  background-image: url(${(props) => props.image});
   background-size: cover;
 `;
 
@@ -46,22 +46,23 @@ StyledProfile.Text = styled.div`
 `;
 
 StyledProfile.Name = styled.h1`
-  margin: 0;
   font-size: ${typography.size.medium};
   color: ${colors.red};
   letter-spacing: ${typography.letter_spacing};
 `;
 
 StyledProfile.Work = styled.h2`
-  margin-top: 0;
-  font-size: ${typography.size.base};
+  font-size: ${typography.size.small};
+  margin-top: ${spacers.xxSmall};
+  letter-spacing: 1px;
 `;
 
 StyledProfile.Paragraph = styled.p`
-  max-width: 70%;
+  max-width: 80%;
   font-size: ${typography.size.xSmall};
   text-align: center;
-  margin-top: ${spacers.xxSmall};
+  margin-top: ${spacers.small};
+  line-height: 1.7rem;
 `;
 
 StyledProfile.Links = styled.div`

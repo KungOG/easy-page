@@ -6,7 +6,7 @@ import { ProfileContact } from "../../assets/data/ProfileSocials";
 
 const ProfileSocials = ({ href, icon }) => {
   return (
-    <StyledProfile.Links className="profile__links">
+    <StyledProfile.Links>
       {ProfileContact.map((link, key) => {
         return (
           <StyledProfile.Link

@@ -1,9 +1,11 @@
+import ProfilePicture from "../../assets/images/image.jpg";
+
 export const ProfileYou = {
   id: 1,
+  //image: ProfilePicture,
   name: "Oscar Gustafsson",
   work: "Frontend Developer",
-  text: `“If you want to take the island you need to burn the boats.” <br />
-  Hernán Cortés"`,
+  text: `“If you want to take the island you need to burn the boats.” - Hernán Cortés`,
 };
 
 export const ProfileContact = [
