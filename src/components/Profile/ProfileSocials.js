@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import StyledProfile from "./style";
-import { Button } from "../Button";
 import { ProfileContact } from "../../assets/data/ProfileSocials";
 
 const ProfileSocials = ({ href, icon }) => {
@@ -14,6 +13,7 @@ const ProfileSocials = ({ href, icon }) => {
             href={link.href}
             rel="noopener noreferrer external"
             target="_blank"
+            icon={link.siteIcon}
           >
             <i className={`fa fa-${link.siteIcon}`}></i>
           </StyledProfile.Link>
