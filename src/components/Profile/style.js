@@ -106,6 +106,22 @@ StyledProfile.Link = styled.a`
   &:hover > i {
     color: ${colors.white};
   }
+
+  & .fa.fa-${(props) => props.icon} {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    display: inline-block;
+    font: normal normal normal ${typography.size.xSmall} / 1 FontAwesome;
+    font-size: ${typography.size.xSmall};
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  & i {
+    position: relative;
+    transition: all 0.25s ease;
+    color: ${colors.red};
+  }
 `;
 
 export default StyledProfile;
