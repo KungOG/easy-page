@@ -5,6 +5,13 @@ import { ProjectCard } from "../ProjectCard";
 
 const Slider = ({ children, bullets }) => {
   const [activeSlide, setActiveSlide] = useState(1);
+
+  const onTouch = (value) => {
+    console.log(value)
+    if(value && activeSlide > 1) return setActiveSlide(activeSlide - 1)
+    if(!value && children.length > activeSlide) return setActiveSlide(activeSlide + 1)
+  }
+
   return (
     <>
       <StyledSlider currentSlide={activeSlide - 1}>
@@ -18,6 +25,7 @@ const Slider = ({ children, bullets }) => {
               projectLink={item.projectLink}
               projectTag={item.projectTag}
               active={activeSlide - 1 === key}
+              handleFunction={onTouch}
             />
           );
         })}
